@@ -45,7 +45,7 @@ vector<int>* findSwappedCandies(vector<int>& alice , vector<int>& bob){
         bobTotalCandies += bob[i];
     }
     
-    int equalCandies = std::min(aliceTotalCandies,bobTotalCandies) + abs(bobTotalCandies - aliceTotalCandies)/2 ;
+    int equalCandies = std::min(aliceTotalCandies,bobTotalCandies) + abs(bobTotalCandies - aliceTotalCandies)/2 ; //target will be the no of candies left after swapping current candy box 
     
     sort(bob.begin(),bob.end());
     

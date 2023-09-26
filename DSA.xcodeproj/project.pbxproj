@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		009549992ABDF972005F14BB /* KthMissingPositiveNumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 009549982ABDF972005F14BB /* KthMissingPositiveNumber.cpp */; };
+		00971D6D2AC35846006B3EB6 /* SingleElementSortedArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00971D6C2AC35846006B3EB6 /* SingleElementSortedArray.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +32,8 @@
 		002637572AB72B2900382823 /* PeakIndexMountainArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PeakIndexMountainArray.cpp; sourceTree = "<group>"; };
 		002637592AB8C29000382823 /* FindMountainArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FindMountainArray.cpp; sourceTree = "<group>"; };
 		009549982ABDF972005F14BB /* KthMissingPositiveNumber.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KthMissingPositiveNumber.cpp; sourceTree = "<group>"; };
+		00971D6A2AC04B95006B3EB6 /* SpecialArrayWithXElementsGreater.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SpecialArrayWithXElementsGreater.cpp; sourceTree = "<group>"; };
+		00971D6C2AC35846006B3EB6 /* SingleElementSortedArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SingleElementSortedArray.cpp; sourceTree = "<group>"; };
 		00977C2B2ABCAE8F00B5F6E1 /* FairCandySwap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FairCandySwap.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,8 @@
 				001DA1652AB974EC00164589 /* RotatedBinarySearch.cpp */,
 				00977C2B2ABCAE8F00B5F6E1 /* FairCandySwap.cpp */,
 				009549982ABDF972005F14BB /* KthMissingPositiveNumber.cpp */,
+				00971D6A2AC04B95006B3EB6 /* SpecialArrayWithXElementsGreater.cpp */,
+				00971D6C2AC35846006B3EB6 /* SingleElementSortedArray.cpp */,
 			);
 			path = BinarySearch;
 			sourceTree = "<group>";
@@ -135,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				009549992ABDF972005F14BB /* KthMissingPositiveNumber.cpp in Sources */,
+				00971D6D2AC35846006B3EB6 /* SingleElementSortedArray.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

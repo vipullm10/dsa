@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00971D6D2AC35846006B3EB6 /* SingleElementSortedArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00971D6C2AC35846006B3EB6 /* SingleElementSortedArray.cpp */; };
+		009F32402AD2C93600D99AF7 /* KokoEatingBananas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 009F323F2AD2C93600D99AF7 /* KokoEatingBananas.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +35,8 @@
 		00971D6A2AC04B95006B3EB6 /* SpecialArrayWithXElementsGreater.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SpecialArrayWithXElementsGreater.cpp; sourceTree = "<group>"; };
 		00971D6C2AC35846006B3EB6 /* SingleElementSortedArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SingleElementSortedArray.cpp; sourceTree = "<group>"; };
 		00977C2B2ABCAE8F00B5F6E1 /* FairCandySwap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FairCandySwap.cpp; sourceTree = "<group>"; };
+		009D842D2AC998AD001C5526 /* PeakElement.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PeakElement.cpp; sourceTree = "<group>"; };
+		009F323F2AD2C93600D99AF7 /* KokoEatingBananas.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KokoEatingBananas.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,8 @@
 				009549982ABDF972005F14BB /* KthMissingPositiveNumber.cpp */,
 				00971D6A2AC04B95006B3EB6 /* SpecialArrayWithXElementsGreater.cpp */,
 				00971D6C2AC35846006B3EB6 /* SingleElementSortedArray.cpp */,
+				009D842D2AC998AD001C5526 /* PeakElement.cpp */,
+				009F323F2AD2C93600D99AF7 /* KokoEatingBananas.cpp */,
 			);
 			path = BinarySearch;
 			sourceTree = "<group>";
@@ -139,7 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00971D6D2AC35846006B3EB6 /* SingleElementSortedArray.cpp in Sources */,
+				009F32402AD2C93600D99AF7 /* KokoEatingBananas.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

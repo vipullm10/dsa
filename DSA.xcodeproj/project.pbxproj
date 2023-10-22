@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00C07C252AE3F3CC000FFB3E /* SortedMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C07C242AE3F3CC000FFB3E /* SortedMatrix.cpp */; };
+		0090FF4D2AE571600036346F /* BubbleSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0090FF4C2AE571600036346F /* BubbleSort.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +31,7 @@
 		002637552AB71AB700382823 /* FirstAndLastOcuurence.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FirstAndLastOcuurence.cpp; sourceTree = "<group>"; };
 		002637572AB72B2900382823 /* PeakIndexMountainArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PeakIndexMountainArray.cpp; sourceTree = "<group>"; };
 		002637592AB8C29000382823 /* FindMountainArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FindMountainArray.cpp; sourceTree = "<group>"; };
+		0090FF4C2AE571600036346F /* BubbleSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BubbleSort.cpp; sourceTree = "<group>"; };
 		009549982ABDF972005F14BB /* KthMissingPositiveNumber.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KthMissingPositiveNumber.cpp; sourceTree = "<group>"; };
 		00971D6A2AC04B95006B3EB6 /* SpecialArrayWithXElementsGreater.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SpecialArrayWithXElementsGreater.cpp; sourceTree = "<group>"; };
 		00971D6C2AC35846006B3EB6 /* SingleElementSortedArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SingleElementSortedArray.cpp; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		002637362AB5B80D00382823 = {
 			isa = PBXGroup;
 			children = (
+				0090FF4B2AE571470036346F /* Sorting */,
 				0026374E2AB5B93500382823 /* BinarySearch */,
 				002637402AB5B80D00382823 /* Products */,
 			);
@@ -88,6 +90,14 @@
 				00C07C242AE3F3CC000FFB3E /* SortedMatrix.cpp */,
 			);
 			path = BinarySearch;
+			sourceTree = "<group>";
+		};
+		0090FF4B2AE571470036346F /* Sorting */ = {
+			isa = PBXGroup;
+			children = (
+				0090FF4C2AE571600036346F /* BubbleSort.cpp */,
+			);
+			path = Sorting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00C07C252AE3F3CC000FFB3E /* SortedMatrix.cpp in Sources */,
+				0090FF4D2AE571600036346F /* BubbleSort.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

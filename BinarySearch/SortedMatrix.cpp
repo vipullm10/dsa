@@ -55,16 +55,14 @@ vector<int> search(vector<vector<int>> matrix , int target){
 int main(){
     vector<vector<int>> matrix;
     vector<int> v1;
-    v1.insert(v1.end(), {1,2,3,4});
+    v1.insert(v1.end(), {1,3,5,7});
     vector<int> v2;
-    v2.insert(v2.end(),{5,6,7,8});
+    v2.insert(v2.end(),{10,11,16,20});
     vector<int> v3;
-    v3.insert(v3.end(),{9,10,11,12});
-    vector<int> v4;
-    v4.insert(v4.end(),{13,14,15,16});
-    matrix.insert(matrix.end(), {v1,v2,v3,v4});
+    v3.insert(v3.end(),{23,30,34,60});
+    matrix.insert(matrix.end(), {v1,v2,v3});
     
-    vector<int> result = search(matrix,11);
+    vector<int> result = search(matrix,3);
     cout<<result[0]<<" "<<result[1]<<endl;
     if(result[0]!=-1)
         cout<<matrix[result[0]][result[1]]<<endl;

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0090FF4D2AE571600036346F /* BubbleSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0090FF4C2AE571600036346F /* BubbleSort.cpp */; };
+		0096E6902AE80364009D254F /* SelectionSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0096E68F2AE80364009D254F /* SelectionSort.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +33,7 @@
 		002637592AB8C29000382823 /* FindMountainArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FindMountainArray.cpp; sourceTree = "<group>"; };
 		0090FF4C2AE571600036346F /* BubbleSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BubbleSort.cpp; sourceTree = "<group>"; };
 		009549982ABDF972005F14BB /* KthMissingPositiveNumber.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KthMissingPositiveNumber.cpp; sourceTree = "<group>"; };
+		0096E68F2AE80364009D254F /* SelectionSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SelectionSort.cpp; sourceTree = "<group>"; };
 		00971D6A2AC04B95006B3EB6 /* SpecialArrayWithXElementsGreater.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SpecialArrayWithXElementsGreater.cpp; sourceTree = "<group>"; };
 		00971D6C2AC35846006B3EB6 /* SingleElementSortedArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SingleElementSortedArray.cpp; sourceTree = "<group>"; };
 		00977C2B2ABCAE8F00B5F6E1 /* FairCandySwap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FairCandySwap.cpp; sourceTree = "<group>"; };
@@ -96,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				0090FF4C2AE571600036346F /* BubbleSort.cpp */,
+				0096E68F2AE80364009D254F /* SelectionSort.cpp */,
 			);
 			path = Sorting;
 			sourceTree = "<group>";
@@ -157,7 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0090FF4D2AE571600036346F /* BubbleSort.cpp in Sources */,
+				0096E6902AE80364009D254F /* SelectionSort.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

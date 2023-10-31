@@ -28,7 +28,7 @@ int missingNumber(vector<int>& nums) {
             nums[i] = temp;
         }
         i++;
-    }
+    } 
     for(int j = 0;j<nums.size();j++){
         if(nums[j] != j)
             return j;

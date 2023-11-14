@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		009168192AF17CB5000DDB01 /* MissingNumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 009168182AF17CB5000DDB01 /* MissingNumber.cpp */; };
+		00E947132B039F5000A8B70A /* Largestnumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00DE676D2B00FA2800D3F808 /* Largestnumber.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +35,11 @@
 		0090FF4C2AE571600036346F /* BubbleSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BubbleSort.cpp; sourceTree = "<group>"; };
 		0091344A2AEAE962004FE9F4 /* InsertionSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InsertionSort.cpp; sourceTree = "<group>"; };
 		009168182AF17CB5000DDB01 /* MissingNumber.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MissingNumber.cpp; sourceTree = "<group>"; };
+		00917F7B2AFAB25C00BD887D /* FindThreeSum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FindThreeSum.cpp; sourceTree = "<group>"; };
+		009268372AF965EE00192823 /* ThreeSum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ThreeSum.cpp; sourceTree = "<group>"; };
+		0092BFBC2AF6596A00E64B08 /* FindDisappearedNumbers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FindDisappearedNumbers.cpp; sourceTree = "<group>"; };
+		0092BFBE2AF6633900E64B08 /* FindAllDuplicates.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FindAllDuplicates.cpp; sourceTree = "<group>"; };
+		0093D1002AFC0AE500344E7A /* ListSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ListSort.cpp; sourceTree = "<group>"; };
 		009549982ABDF972005F14BB /* KthMissingPositiveNumber.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KthMissingPositiveNumber.cpp; sourceTree = "<group>"; };
 		0096E68F2AE80364009D254F /* SelectionSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SelectionSort.cpp; sourceTree = "<group>"; };
 		00971D6A2AC04B95006B3EB6 /* SpecialArrayWithXElementsGreater.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SpecialArrayWithXElementsGreater.cpp; sourceTree = "<group>"; };
@@ -44,6 +49,8 @@
 		009F323F2AD2C93600D99AF7 /* KokoEatingBananas.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KokoEatingBananas.cpp; sourceTree = "<group>"; };
 		00C07C222AE3E8B4000FFB3E /* RowColMatrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RowColMatrix.cpp; sourceTree = "<group>"; };
 		00C07C242AE3F3CC000FFB3E /* SortedMatrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SortedMatrix.cpp; sourceTree = "<group>"; };
+		00DE676D2B00FA2800D3F808 /* Largestnumber.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Largestnumber.cpp; sourceTree = "<group>"; };
+		00E947112B039D7200A8B70A /* MergeIntervals.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MergeIntervals.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +111,13 @@
 				0091344A2AEAE962004FE9F4 /* InsertionSort.cpp */,
 				004EB2732AEE75D800AAA583 /* CyclicSort.cpp */,
 				009168182AF17CB5000DDB01 /* MissingNumber.cpp */,
+				0092BFBC2AF6596A00E64B08 /* FindDisappearedNumbers.cpp */,
+				0092BFBE2AF6633900E64B08 /* FindAllDuplicates.cpp */,
+				009268372AF965EE00192823 /* ThreeSum.cpp */,
+				00917F7B2AFAB25C00BD887D /* FindThreeSum.cpp */,
+				0093D1002AFC0AE500344E7A /* ListSort.cpp */,
+				00DE676D2B00FA2800D3F808 /* Largestnumber.cpp */,
+				00E947112B039D7200A8B70A /* MergeIntervals.cpp */,
 			);
 			path = Sorting;
 			sourceTree = "<group>";
@@ -165,7 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				009168192AF17CB5000DDB01 /* MissingNumber.cpp in Sources */,
+				00E947132B039F5000A8B70A /* Largestnumber.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@ using namespace std;
 
 
 int main(){
-
+#if 0
     AbstractQueue * queueObj = new LinearQueueImplementation(5);
     if(!queueObj->enqueue(1))
         cout<<"Could not enqueue 1"<<endl;
@@ -91,4 +91,42 @@ int main(){
     
     //circularQueueObj->display();
     delete circularQueueObj;
+    
+#endif
+    
+    LinkedListLinearQueueImplementation *linkedListLinearQueue = new LinkedListLinearQueueImplementation();
+    if(!linkedListLinearQueue->enqueue(1))
+        cout<<"Could not enqueue 1"<<endl;
+    cout<<linkedListLinearQueue->peek()<<endl;
+    int removed = linkedListLinearQueue->dequeue();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the queue"<<endl;
+    removed = linkedListLinearQueue->dequeue();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the queue"<<endl;
+    if(!linkedListLinearQueue->enqueue(2))
+        cout<<"Could not enqueue 2"<<endl;
+    cout<<linkedListLinearQueue->peek()<<endl;
+    if(!linkedListLinearQueue->enqueue(3))
+        cout<<"Could not enqueue 3"<<endl;
+    cout<<linkedListLinearQueue->peek()<<endl;
+    if(!linkedListLinearQueue->enqueue(4))
+        cout<<"Could not enqueue 4"<<endl;
+    cout<<linkedListLinearQueue->peek()<<endl;
+    removed = linkedListLinearQueue->dequeue();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the queue"<<endl;
+    removed = linkedListLinearQueue->dequeue();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the queue"<<endl;
+    removed = linkedListLinearQueue->dequeue();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the queue"<<endl;
+    
+    if(!linkedListLinearQueue->enqueue(5))
+        cout<<"Could not enqueue 5"<<endl;
+    cout<<linkedListLinearQueue->peek()<<endl;
+    removed = linkedListLinearQueue->dequeue();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the queue"<<endl;
 }

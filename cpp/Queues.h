@@ -49,3 +49,35 @@ public:
     bool isFull() override;
     void display();
 };
+
+
+struct node{
+    int data;
+    node* next;
+};
+
+
+class LinkedListAbstractQueue{
+protected:
+    node *front;
+    node *rear;
+public:
+    LinkedListAbstractQueue();
+    virtual ~LinkedListAbstractQueue();
+    virtual bool enqueue(int data) = 0;
+    virtual int dequeue() = 0;
+    int peek();
+    virtual bool isEmpty() = 0;
+    //virtual bool isFull() = 0; no queusize hence this queue can never be full
+
+};
+
+
+class LinkedListLinearQueueImplementation : public LinkedListAbstractQueue{
+public:
+    LinkedListLinearQueueImplementation();
+    ~LinkedListLinearQueueImplementation();
+    bool enqueue(int data) override;
+    int dequeue() override;
+    bool isEmpty() override;
+};

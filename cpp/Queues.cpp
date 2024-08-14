@@ -33,6 +33,27 @@ int AbstractQueue::peek(){
 }
 
 
+/**********************
+ LINKED LIST ABSTRACT QUEUE IMPLEMENTATION
+**********************/
+LinkedListAbstractQueue::LinkedListAbstractQueue(){
+    this->front = NULL;
+    this->rear = NULL;
+}
+
+LinkedListAbstractQueue::~LinkedListAbstractQueue(){
+    cout<<"Destructor of LinkedListAbstractQueue"<<endl;
+    cout<<"Destroyed LinkedList"<<endl;
+}
+
+int LinkedListAbstractQueue::peek(){
+    if(isEmpty())
+        return -1;
+    return front->data;
+}
+
+
+
 
 
 
@@ -135,3 +156,49 @@ void CircularQueueImplementation::display(){
     }
 }
 
+
+
+/**********************
+    LINKED LIST LINEAR QUEUE IMPLEMENTATION
+**********************/
+
+LinkedListLinearQueueImplementation::LinkedListLinearQueueImplementation(){
+    
+}
+
+LinkedListLinearQueueImplementation::~LinkedListLinearQueueImplementation(){
+    cout<<"Destructor of LinkedListLinearQueueImplementation"<<endl;
+}
+
+bool LinkedListLinearQueueImplementation::enqueue(int data){
+    //no overflow condition can occur in this case as we will allocate new nodes dynamically
+    node* listNode = (node*)malloc(sizeof(node));
+    if(listNode == NULL)
+        return false; //malloc fail/memory full,etc
+    listNode->data = data;
+    listNode->next = NULL;
+    if(isEmpty()){
+        front = listNode;
+    }
+    else{
+        rear->next = listNode;
+    }
+    rear = listNode;
+    return true;
+}
+
+int LinkedListLinearQueueImplementation::dequeue(){
+    if(front == NULL) //queue underflow
+        return -1;
+    int data = front->data; //data value which indicates which element is removed
+    node* temp = front; //storing front pointer which we will use to deallocate memory
+    front = front->next; //incrementing front
+    free(temp); //freeing old front memory
+    return data;
+}
+ 
+bool LinkedListLinearQueueImplementation::isEmpty(){
+    if(front == NULL)
+        return true;
+    return false;
+}

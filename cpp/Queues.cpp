@@ -202,3 +202,208 @@ bool LinkedListLinearQueueImplementation::isEmpty(){
         return true;
     return false;
 }
+
+
+/**********************
+    DEQUE IMPLEMENTATION
+**********************/
+
+Deque::Deque(int queueSize):queueSize(queueSize){
+    frontPtr = -1;
+    rearPtr = -1;
+    queuePtr = new int[queueSize];
+}
+
+Deque::~Deque(){
+    delete queuePtr;
+}
+
+bool Deque::isFull(){
+    if(frontPtr == -1 && rearPtr == queueSize-1) //all insertion was done from the rear end and the rear pointer is at the last position
+        return true;
+    if(rearPtr == -1 && frontPtr == 0) //all insertion was done from the front end and the front pointer is at the last position
+        return true;
+    int nextInsertionIndex = rearPtr == queueSize - 1 ? 0 : rearPtr + 1; //checking if there is any space left between rear and front to allow insertion
+    if(nextInsertionIndex == frontPtr) //no gap exists between rear and front , hence we cannot insert from either end
+        return true;
+    return false;
+}
+
+bool Deque::isEmpty(){
+    if(frontPtr == -1 && rearPtr == -1) //if no element was inserted
+        return true;
+    return false;
+}
+
+bool Deque::pushBack(int data){
+    if(isFull())
+        return false;
+    if(rearPtr == queueSize-1 || rearPtr == -1)
+        rearPtr = 0;
+    else
+        rearPtr = rearPtr + 1;
+    queuePtr[rearPtr] = data;
+    return true;
+}
+
+bool Deque::pushFront(int data){
+    if(isFull())
+        return false;
+    if(frontPtr == 0 || frontPtr == -1)
+        frontPtr = queueSize-1;
+    else
+        frontPtr = frontPtr - 1;
+    queuePtr[frontPtr] = data;
+    return true;
+}
+ 
+int Deque::popBack(){
+   if(isEmpty())
+       return -1;
+    if(rearPtr == frontPtr){
+        int removedData = queuePtr[rearPtr];
+        rearPtr = -1;
+        frontPtr = -1;
+        return removedData;
+    }
+    int removedData = queuePtr[rearPtr];
+    if(rearPtr == 0)
+        rearPtr = queueSize - 1;
+    else
+        rearPtr = rearPtr - 1;
+    return removedData;
+}
+
+int Deque::popFront(){
+    if(isEmpty())
+        return -1;
+    if(rearPtr == frontPtr){
+        int removedData = queuePtr[frontPtr];
+        frontPtr = -1;
+        rearPtr = -1;
+        return removedData;
+    }
+    int removedData = queuePtr[frontPtr];
+    if(frontPtr == queueSize - 1)
+        frontPtr = 0;
+    else
+        frontPtr = frontPtr + 1;
+    return removedData;
+}
+
+int Deque::front(){
+    if(frontPtr == -1)
+        return -1;
+    return queuePtr[frontPtr];
+}
+
+int Deque::back(){
+    if(rearPtr == -1)
+        return -1;
+    return queuePtr[rearPtr];
+}
+
+/**********************
+    DEQUE USING DOUBLY LINKED LIST IMPLEMENTATION
+**********************/
+
+DequeLL::DequeLL(){
+    frontPtr = NULL;
+    rearPtr = NULL;
+}
+
+DequeLL::~DequeLL(){
+    
+}
+
+bool DequeLL::isEmpty(){
+    if(frontPtr == NULL && rearPtr == NULL)
+        return true;
+    return false;
+}
+
+bool DequeLL::pushBack(int data){
+    dequeNode * node = (dequeNode*)malloc(sizeof(dequeNode));
+    if(node == NULL)
+        return false;
+    node->data = data;
+    if(rearPtr == NULL && frontPtr == NULL){
+        rearPtr = node;
+        frontPtr = node;
+        node->next = NULL;
+        node->prev = NULL;
+    }
+    else{
+        rearPtr->next = node;
+        node->prev = rearPtr;
+        rearPtr = node;
+    }
+    return true;
+}
+
+bool DequeLL::pushFront(int data){
+    dequeNode *node = (dequeNode*)malloc(sizeof(dequeNode));
+    if(node == NULL)
+        return false;
+    node->data = data;
+    if(frontPtr == NULL && rearPtr == NULL){
+        frontPtr = node;
+        rearPtr = node;
+        frontPtr->next = NULL;
+        frontPtr->prev = NULL;
+    }
+    else{
+        frontPtr->prev = node;
+        node->next = frontPtr;
+        frontPtr = node;
+    }
+    return true;
+}
+
+int DequeLL::popBack(){
+    if(isEmpty())
+        return -1;
+    int removed = rearPtr->data;
+    if(rearPtr == frontPtr){
+        frontPtr = NULL;
+        free(rearPtr);
+        rearPtr = NULL;
+    }
+    else{
+        dequeNode *newRear = rearPtr->prev;
+        free(rearPtr);
+        rearPtr = newRear;
+        rearPtr->next = NULL;
+    }
+    return removed;
+}
+
+int DequeLL::popFront(){
+    if(isEmpty())
+        return -1;
+    int removed = frontPtr->data;
+    if(rearPtr == frontPtr){
+        rearPtr = NULL;
+        free(frontPtr);
+        frontPtr = NULL;
+    }
+    else{
+        dequeNode *newfront = frontPtr->next;
+        free(frontPtr);
+        frontPtr = newfront;
+        frontPtr->prev = NULL;
+    }
+    return removed;
+}
+
+int DequeLL::back(){
+    if(isEmpty())
+        return -1;
+    return rearPtr->data;
+}
+
+int DequeLL::front(){
+    if(isEmpty())
+        return -1;
+    return frontPtr->data;
+}

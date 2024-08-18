@@ -92,7 +92,6 @@ int main(){
     //circularQueueObj->display();
     delete circularQueueObj;
     
-#endif
     
     LinkedListLinearQueueImplementation *linkedListLinearQueue = new LinkedListLinearQueueImplementation();
     if(!linkedListLinearQueue->enqueue(1))
@@ -129,4 +128,144 @@ int main(){
     removed = linkedListLinearQueue->dequeue();
     if(removed!=-1)
         cout<<removed<<" was removed from the queue"<<endl;
+    
+#endif
+    
+    Deque *dequeuObj = new Deque(7);
+    if(!dequeuObj->pushBack(1))
+        cout<<"Could not pushBack 1"<<endl;
+    if(!dequeuObj->pushBack(2))
+        cout<<"Could not pushBack 2"<<endl;
+    if(!dequeuObj->pushFront(3))
+        cout<<"Could not pushFront 3"<<endl;
+    if(!dequeuObj->pushFront(4))
+        cout<<"Could not pushFront 4"<<endl;
+    if(!dequeuObj->pushFront(5))
+        cout<<"Could not pushFront 5"<<endl;
+    if(!dequeuObj->pushFront(6))
+        cout<<"Could not pushFront 6"<<endl;
+    if(!dequeuObj->pushFront(7))
+        cout<<"Could not pushFront 7"<<endl;
+    cout<<dequeuObj->front()<<endl;
+    cout<<dequeuObj->back()<<endl;
+    if(!dequeuObj->pushFront(8))
+        cout<<"Could not pushFront 8"<<endl;
+    int removed = dequeuObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    cout<<dequeuObj->front()<<endl;
+    cout<<dequeuObj->back()<<endl;
+    if(!dequeuObj->pushFront(8))
+        cout<<"Could not pushFront 8"<<endl;
+    cout<<dequeuObj->front()<<endl;
+    cout<<dequeuObj->back()<<endl;
+    if(!dequeuObj->pushFront(9))
+        cout<<"Could not pushFront 9"<<endl;
+    removed = dequeuObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    removed = dequeuObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    removed = dequeuObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    removed = dequeuObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    removed = dequeuObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    removed = dequeuObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    removed = dequeuObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    removed = dequeuObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    if(!dequeuObj->pushFront(9))
+        cout<<"Could not pushFront 9"<<endl;
+    cout<<dequeuObj->front()<<endl;
+    
+    
+    
+    cout<<endl;
+    cout<<"DequeLL TEST"<<endl;
+    
+    
+    
+    DequeLL *dequeuLLObj = new DequeLL();
+    if(!dequeuLLObj->pushBack(1))
+        cout<<"Could not pushBack 1"<<endl;
+    if(!dequeuLLObj->pushBack(2))
+        cout<<"Could not pushBack 2"<<endl;
+    if(!dequeuLLObj->pushFront(3))
+        cout<<"Could not pushFront 3"<<endl;
+    if(!dequeuLLObj->pushFront(4))
+        cout<<"Could not pushFront 4"<<endl;
+    if(!dequeuLLObj->pushFront(5))
+        cout<<"Could not pushFront 5"<<endl;
+    if(!dequeuLLObj->pushFront(6))
+        cout<<"Could not pushFront 6"<<endl;
+    if(!dequeuLLObj->pushFront(7))
+        cout<<"Could not pushFront 7"<<endl;
+    cout<<dequeuLLObj->front()<<endl;
+    cout<<dequeuLLObj->back()<<endl;
+    //if(!dequeuLLObj->pushFront(8))
+        //cout<<"Could not pushFront 8"<<endl;
+    removed = dequeuLLObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    cout<<dequeuLLObj->front()<<endl;
+    cout<<dequeuLLObj->back()<<endl;
+    if(!dequeuLLObj->pushFront(8))
+        cout<<"Could not pushFront 8"<<endl;
+    cout<<dequeuLLObj->front()<<endl;
+    cout<<dequeuLLObj->back()<<endl;
+    //if(!dequeuLLObj->pushFront(9))
+        //cout<<"Could not pushFront 9"<<endl;
+    removed = dequeuLLObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    removed = dequeuLLObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    removed = dequeuLLObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    removed = dequeuLLObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    removed = dequeuLLObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    removed = dequeuLLObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    removed = dequeuLLObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    removed = dequeuLLObj->popBack();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the rear of the queue"<<endl;
+    if(!dequeuLLObj->pushFront(9))
+        cout<<"Could not pushFront 9"<<endl;
+    cout<<dequeuLLObj->front()<<endl;
+    removed = dequeuLLObj->popFront();
+    cout<<removed<<" was removed from the front of the queue"<<endl;
+    if(!dequeuLLObj->pushBack(1))
+        cout<<"Could not pushBack 1"<<endl;
+    if(!dequeuLLObj->pushBack(2))
+        cout<<"Could not pushBack 2"<<endl;
+    removed = dequeuLLObj->popFront();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the front of the queue"<<endl;
+    removed = dequeuLLObj->popFront();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the front of the queue"<<endl;
+    removed = dequeuLLObj->popFront();
+    if(removed!=-1)
+        cout<<removed<<" was removed from the front of the queue"<<endl;
 }

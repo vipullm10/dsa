@@ -7,14 +7,14 @@
 #include <iostream>
 #include <stdio.h>
 #include "Queues.h"
- 
+
 
 using namespace std;
 
 
 /**********************
-    ABSTRACT QUEUE IMPLEMENTATION
-**********************/
+ ABSTRACT QUEUE IMPLEMENTATION
+ **********************/
 AbstractQueue::AbstractQueue(int queueSize){
     this->front = -1;
     this->rear = -1;
@@ -35,7 +35,7 @@ int AbstractQueue::peek(){
 
 /**********************
  LINKED LIST ABSTRACT QUEUE IMPLEMENTATION
-**********************/
+ **********************/
 LinkedListAbstractQueue::LinkedListAbstractQueue(){
     this->front = NULL;
     this->rear = NULL;
@@ -59,8 +59,8 @@ int LinkedListAbstractQueue::peek(){
 
 
 /**********************
-    LINEAR QUEUE IMPLEMENTATION
-**********************/
+ LINEAR QUEUE IMPLEMENTATION
+ **********************/
 LinearQueueImplementation::LinearQueueImplementation(int queueSize):AbstractQueue(queueSize){
     
 }
@@ -96,8 +96,8 @@ bool LinearQueueImplementation::isFull(){
 
 
 /**********************
-    CIRCULAR QUEUE IMPLEMENTATION
-**********************/
+ CIRCULAR QUEUE IMPLEMENTATION
+ **********************/
 CircularQueueImplementation::CircularQueueImplementation(int queueSize):AbstractQueue(queueSize){}
 
 CircularQueueImplementation::~CircularQueueImplementation(){
@@ -159,8 +159,8 @@ void CircularQueueImplementation::display(){
 
 
 /**********************
-    LINKED LIST LINEAR QUEUE IMPLEMENTATION
-**********************/
+ LINKED LIST LINEAR QUEUE IMPLEMENTATION
+ **********************/
 
 LinkedListLinearQueueImplementation::LinkedListLinearQueueImplementation(){
     
@@ -196,7 +196,7 @@ int LinkedListLinearQueueImplementation::dequeue(){
     free(temp); //freeing old front memory
     return data;
 }
- 
+
 bool LinkedListLinearQueueImplementation::isEmpty(){
     if(front == NULL)
         return true;
@@ -205,8 +205,8 @@ bool LinkedListLinearQueueImplementation::isEmpty(){
 
 
 /**********************
-    DEQUE IMPLEMENTATION
-**********************/
+ DEQUE IMPLEMENTATION
+ **********************/
 
 Deque::Deque(int queueSize):queueSize(queueSize){
     frontPtr = -1;
@@ -219,10 +219,14 @@ Deque::~Deque(){
 }
 
 bool Deque::isFull(){
-    if(frontPtr == -1 && rearPtr == queueSize-1) //all insertion was done from the rear end and the rear pointer is at the last position
+    if(frontPtr == -1 && rearPtr == queueSize-1){
+        cout<<"all insertion was done from the rear end and the rear pointer is at the last position"<<endl;
         return true;
-    if(rearPtr == -1 && frontPtr == 0) //all insertion was done from the front end and the front pointer is at the last position
+    }
+    if(rearPtr == -1 && frontPtr == 0){
+        cout<<"all insertion was done from the front end and the front pointer is at the last position"<<endl;
         return true;
+    }
     int nextInsertionIndex = rearPtr == queueSize - 1 ? 0 : rearPtr + 1; //checking if there is any space left between rear and front to allow insertion
     if(nextInsertionIndex == frontPtr) //no gap exists between rear and front , hence we cannot insert from either end
         return true;
@@ -236,10 +240,14 @@ bool Deque::isEmpty(){
 }
 
 bool Deque::pushBack(int data){
-    if(isFull())
+    if(isFull()){
         return false;
-    if(rearPtr == queueSize-1 || rearPtr == -1)
+    }
+    if(frontPtr == -1)
+        frontPtr = 0;
+    if(rearPtr == queueSize-1 || rearPtr == -1){
         rearPtr = 0;
+    }
     else
         rearPtr = rearPtr + 1;
     queuePtr[rearPtr] = data;
@@ -249,46 +257,53 @@ bool Deque::pushBack(int data){
 bool Deque::pushFront(int data){
     if(isFull())
         return false;
-    if(frontPtr == 0 || frontPtr == -1)
+    if(rearPtr == -1)
+        rearPtr = queueSize-1;
+    if(frontPtr == 0 || frontPtr == -1){
         frontPtr = queueSize-1;
+    }
     else
         frontPtr = frontPtr - 1;
     queuePtr[frontPtr] = data;
     return true;
 }
- 
+
 int Deque::popBack(){
-   if(isEmpty())
-       return -1;
-    if(rearPtr == frontPtr){
+    if(isEmpty())
+        return false;
+    if(rearPtr == -1)
+        rearPtr = queueSize - 1;
+    if(rearPtr == frontPtr || (frontPtr == -1 && rearPtr == 0)){
         int removedData = queuePtr[rearPtr];
         rearPtr = -1;
         frontPtr = -1;
-        return removedData;
+        return true;
     }
     int removedData = queuePtr[rearPtr];
     if(rearPtr == 0)
         rearPtr = queueSize - 1;
     else
         rearPtr = rearPtr - 1;
-    return removedData;
+    return true;
 }
 
 int Deque::popFront(){
     if(isEmpty())
-        return -1;
-    if(rearPtr == frontPtr){
+        return false;
+    if(frontPtr == -1)
+        frontPtr = 0;
+    if(rearPtr == frontPtr || (rearPtr == -1 && frontPtr == queueSize-1)){
         int removedData = queuePtr[frontPtr];
         frontPtr = -1;
         rearPtr = -1;
-        return removedData;
+        return true;
     }
     int removedData = queuePtr[frontPtr];
     if(frontPtr == queueSize - 1)
         frontPtr = 0;
     else
         frontPtr = frontPtr + 1;
-    return removedData;
+    return true;
 }
 
 int Deque::front(){
@@ -304,8 +319,8 @@ int Deque::back(){
 }
 
 /**********************
-    DEQUE USING DOUBLY LINKED LIST IMPLEMENTATION
-**********************/
+ DEQUE USING DOUBLY LINKED LIST IMPLEMENTATION
+ **********************/
 
 DequeLL::DequeLL(){
     frontPtr = NULL;

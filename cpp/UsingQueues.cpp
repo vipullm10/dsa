@@ -129,67 +129,42 @@ int main(){
     if(removed!=-1)
         cout<<removed<<" was removed from the queue"<<endl;
     
+    
+    
+    
 #endif
     
-    Deque *dequeuObj = new Deque(7);
-    if(!dequeuObj->pushBack(1))
-        cout<<"Could not pushBack 1"<<endl;
-    if(!dequeuObj->pushBack(2))
-        cout<<"Could not pushBack 2"<<endl;
-    if(!dequeuObj->pushFront(3))
-        cout<<"Could not pushFront 3"<<endl;
-    if(!dequeuObj->pushFront(4))
-        cout<<"Could not pushFront 4"<<endl;
+    
+    
+    //["MyCircularDeque","insertFront","getFront","isEmpty","deleteFront","insertLast","getRear","insertLast","insertFront","deleteLast","insertLast","isEmpty"]
+    //[[8],[5],[],[],[],[3],[],[7],[7],[],[4],[]]
+    Deque *dequeuObj = new Deque(8);
     if(!dequeuObj->pushFront(5))
-        cout<<"Could not pushFront 5"<<endl;
-    if(!dequeuObj->pushFront(6))
-        cout<<"Could not pushFront 6"<<endl;
+        cout<<"Could not pushFront 8"<<endl;
+    cout<<dequeuObj->front()<<endl;
+    if(dequeuObj->isEmpty())
+        cout<<"empty"<<endl;
+    else
+        cout<<"not empty"<<endl;
+    int pop = dequeuObj->popFront();
+    cout<<pop<<" was removed from front"<<endl;
+    if(!dequeuObj->pushBack(3))
+        cout<<"Could not pushBack 3"<<endl;
+    cout<<dequeuObj->back()<<endl;
+    if(!dequeuObj->pushBack(7))
+        cout<<"Could not pushBack 7"<<endl;
     if(!dequeuObj->pushFront(7))
         cout<<"Could not pushFront 7"<<endl;
-    cout<<dequeuObj->front()<<endl;
-    cout<<dequeuObj->back()<<endl;
-    if(!dequeuObj->pushFront(8))
-        cout<<"Could not pushFront 8"<<endl;
-    int removed = dequeuObj->popBack();
-    if(removed!=-1)
-        cout<<removed<<" was removed from the rear of the queue"<<endl;
-    cout<<dequeuObj->front()<<endl;
-    cout<<dequeuObj->back()<<endl;
-    if(!dequeuObj->pushFront(8))
-        cout<<"Could not pushFront 8"<<endl;
-    cout<<dequeuObj->front()<<endl;
-    cout<<dequeuObj->back()<<endl;
-    if(!dequeuObj->pushFront(9))
-        cout<<"Could not pushFront 9"<<endl;
-    removed = dequeuObj->popBack();
-    if(removed!=-1)
-        cout<<removed<<" was removed from the rear of the queue"<<endl;
-    removed = dequeuObj->popBack();
-    if(removed!=-1)
-        cout<<removed<<" was removed from the rear of the queue"<<endl;
-    removed = dequeuObj->popBack();
-    if(removed!=-1)
-        cout<<removed<<" was removed from the rear of the queue"<<endl;
-    removed = dequeuObj->popBack();
-    if(removed!=-1)
-        cout<<removed<<" was removed from the rear of the queue"<<endl;
-    removed = dequeuObj->popBack();
-    if(removed!=-1)
-        cout<<removed<<" was removed from the rear of the queue"<<endl;
-    removed = dequeuObj->popBack();
-    if(removed!=-1)
-        cout<<removed<<" was removed from the rear of the queue"<<endl;
-    removed = dequeuObj->popBack();
-    if(removed!=-1)
-        cout<<removed<<" was removed from the rear of the queue"<<endl;
-    removed = dequeuObj->popBack();
-    if(removed!=-1)
-        cout<<removed<<" was removed from the rear of the queue"<<endl;
-    if(!dequeuObj->pushFront(9))
-        cout<<"Could not pushFront 9"<<endl;
-    cout<<dequeuObj->front()<<endl;
+    pop = dequeuObj->popBack();
+    if(!dequeuObj->pushBack(4))
+        cout<<"Could not pushFront 4"<<endl;
+    if(dequeuObj->isEmpty())
+        cout<<"empty"<<endl;
+    else
+        cout<<"not empty"<<endl;
     
     
+#if 0
     
     cout<<endl;
     cout<<"DequeLL TEST"<<endl;
@@ -268,4 +243,5 @@ int main(){
     removed = dequeuLLObj->popFront();
     if(removed!=-1)
         cout<<removed<<" was removed from the front of the queue"<<endl;
+#endif
 }
